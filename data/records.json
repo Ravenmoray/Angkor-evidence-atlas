@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "disclaimer": "Site coordinates are approximate reference points, not survey-grade archaeological geometries. No raw LiDAR data or reconstructed buildings are included.",
+  "sites": [
+    {
+      "id": "angkor-wat",
+      "name": "Angkor Wat",
+      "coordinates": [
+        103.866776,
+        13.413278
+      ],
+      "period": "Early 12th century CE",
+      "summary": "A monumental temple complex commissioned under Suryavarman II. The structure is directly documented; the broader inhabited enclosure is understood through archaeological investigation.",
+      "locationReference": {
+        "title": "Vici.org site gazetteer",
+        "url": "https://vici.org/vici/101885/"
+      },
+      "coordinatePrecision": "indicative"
+    },
+    {
+      "id": "bayon",
+      "name": "Bayon",
+      "coordinates": [
+        103.85894,
+        13.44146
+      ],
+      "period": "Late 12th to early 13th century CE",
+      "summary": "A major temple at the center of Angkor Thom. Its surviving masonry is documented, while interpretations of the surrounding ancient population depend on broader archaeological evidence.",
+      "locationReference": {
+        "title": "Mapcarta / OSM location",
+        "url": "https://mapcarta.com/26229934"
+      },
+      "coordinatePrecision": "indicative"
+    },
+    {
+      "id": "ta-prohm",
+      "name": "Ta Prohm",
+      "coordinates": [
+        103.88904,
+        13.43445
+      ],
+      "period": "Late 12th century CE",
+      "summary": "A temple complex associated with Jayavarman VII. The surviving ruins are documented and form part of the Angkor World Heritage landscape.",
+      "locationReference": {
+        "title": "GeoNames location record",
+        "url": "https://www.geonames.org/8224690/ta-prohm.html"
+      },
+      "coordinatePrecision": "indicative"
+    }
+  ],
+  "records": [
+    {
+      "id": "aw-stone-monument",
+      "siteId": "angkor-wat",
+      "level": 0,
+      "title": "Surviving temple complex",
+      "statement": "Angkor Wat is a standing, extensively studied stone monument included in the UNESCO World Heritage property of Angkor.",
+      "uncertainty": "This is a monument-level reference location, not a surveyed outline of every archaeological feature.",
+      "sources": [
+        {
+          "title": "UNESCO Angkor",
+          "url": "https://whc.unesco.org/en/list/668/"
+        }
+      ],
+      "confidence": "high",
+      "confidenceBasis": "Standing monument and inclusion in the officially documented Angkor heritage landscape."
+    },
+    {
+      "id": "bayon-stone-monument",
+      "siteId": "bayon",
+      "level": 0,
+      "title": "Standing temple remains",
+      "statement": "Bayon is a documented temple at the center of Angkor Thom, recognized as part of the Angkor archaeological landscape.",
+      "uncertainty": "The point is a reference location, not a measured building footprint.",
+      "sources": [
+        {
+          "title": "UNESCO Angkor",
+          "url": "https://whc.unesco.org/en/list/668/"
+        }
+      ],
+      "confidence": "high",
+      "confidenceBasis": "Standing monument and inclusion in the officially documented Angkor heritage landscape."
+    },
+    {
+      "id": "ta-prohm-stone-monument",
+      "siteId": "ta-prohm",
+      "level": 0,
+      "title": "Standing temple remains",
+      "statement": "Ta Prohm's surviving temple structures are documented and included in the wider Angkor World Heritage property.",
+      "uncertainty": "No detailed geometric survey or architectural model is supplied by this prototype.",
+      "sources": [
+        {
+          "title": "UNESCO Angkor",
+          "url": "https://whc.unesco.org/en/list/668/"
+        }
+      ],
+      "confidence": "high",
+      "confidenceBasis": "Standing monument and inclusion in the officially documented Angkor heritage landscape."
+    },
+    {
+      "id": "aw-urban-grid",
+      "siteId": "angkor-wat",
+      "level": 1,
+      "title": "Urban blocks, mounds and ponds",
+      "statement": "The 2012 airborne LiDAR survey was interpreted as showing a regular grid of occupation mounds and excavated ponds within Angkor Wat's moated enclosure.",
+      "uncertainty": "LiDAR detects surface topography. It does not reveal exact houses or establish the use of every mound.",
+      "sources": [
+        {
+          "title": "Evans et al., PNAS (2013)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3732978/"
+        }
+      ],
+      "confidence": "medium",
+      "confidenceBasis": "Supported by published landscape-scale interpretations; the record does not map a particular house or earthwork."
+    },
+    {
+      "id": "bayon-urban-landscape",
+      "siteId": "bayon",
+      "level": 1,
+      "title": "Wider planned urban landscape",
+      "statement": "Research places Angkor Thom and its monumental center within a larger engineered and inhabited landscape, rather than an isolated temple precinct.",
+      "uncertainty": "This is an area-wide research interpretation. The Bayon marker does not indicate the footprint of the broader settlement.",
+      "sources": [
+        {
+          "title": "Evans et al., PNAS (2013)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3732978/"
+        },
+        {
+          "title": "Evans, JAS (2016)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0305440316300644"
+        }
+      ],
+      "confidence": "medium",
+      "confidenceBasis": "Supported by published landscape-scale interpretations; the record does not map a particular house or earthwork."
+    },
+    {
+      "id": "aw-wooden-house-concept",
+      "siteId": "angkor-wat",
+      "level": 2,
+      "title": "Possible timber-dwelling model",
+      "statement": "A future 3D layer might illustrate a plausible wooden dwelling, informed by published archaeological and historical work. This is only a design proposal; no dwelling has been placed in the map.",
+      "uncertainty": "Building design, ownership, orientation and exact placement remain unverified here. Do not treat this concept as a discovered structure.",
+      "sources": [
+        {
+          "title": "Virtual Angkor methodology",
+          "url": "https://www.virtualangkor.com/technology"
+        }
+      ],
+      "confidence": "low",
+      "confidenceBasis": "A future design concept rather than an archaeological identification."
+    }
+  ]
+}

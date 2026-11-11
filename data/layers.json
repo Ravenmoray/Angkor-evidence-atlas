@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "layers": [
+    {
+      "id": "monument-references",
+      "title": "Documented monument reference points",
+      "path": "./data/geo/monument-references.geojson",
+      "publicationApproved": true,
+      "geometryStatus": "reference",
+      "license": "Original project compilation of indicative reference coordinates (MIT); underlying gazetteer facts may have separate database rights.",
+      "attribution": "Angkor Evidence Atlas; locations cross-referenced with linked gazetteers in data/records.json.",
+      "sourceUrl": "https://whc.unesco.org/en/list/668/",
+      "dataStatement": "These coordinates are indicative monument points, not LiDAR or surveyed archaeological geometries."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "angkor-wat",
+      "properties": {
+        "siteId": "angkor-wat",
+        "title": "Angkor Wat",
+        "evidenceLevel": 0,
+        "geometryStatus": "reference",
+        "confidence": "high",
+        "description": "Indicative point for a documented surviving monument; not a measured archaeological footprint."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.866776,
+          13.413278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bayon",
+      "properties": {
+        "siteId": "bayon",
+        "title": "Bayon",
+        "evidenceLevel": 0,
+        "geometryStatus": "reference",
+        "confidence": "high",
+        "description": "Indicative point for a documented surviving monument; not a measured archaeological footprint."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85894,
+          13.44146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ta-prohm",
+      "properties": {
+        "siteId": "ta-prohm",
+        "title": "Ta Prohm",
+        "evidenceLevel": 0,
+        "geometryStatus": "reference",
+        "confidence": "high",
+        "description": "Indicative point for a documented surviving monument; not a measured archaeological footprint."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.88904,
+          13.43445
+        ]
+      }
+    }
+  ]
+}

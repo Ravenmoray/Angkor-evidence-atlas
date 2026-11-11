@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="An open-source, evidence-first archaeological explorer for Angkor, Cambodia." />
+  <title>Angkor Evidence Atlas — Research prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brandmark" aria-hidden="true">A<span>·</span></span>
+        <div>
+          <div class="kicker">AN OPEN ARCHAEOLOGY PROJECT</div>
+          <div class="brandname">Angkor Evidence Atlas</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="pill"><span class="dot"></span> Research prototype · v0.2</span>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3732978/" target="_blank" rel="noopener noreferrer" class="paper-link">Foundational research <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="control-panel" aria-label="Explorer controls">
+        <div class="eyebrow">01 / STUDY THE LANDSCAPE</div>
+        <h1>What do we <em>actually</em> know?</h1>
+        <p class="intro">Explore Angkor through sources, interpretations, and explicitly hypothetical reconstructions. Not every beautiful picture is evidence.</p>
+
+        <section class="control-card evidence-card" aria-labelledby="evidence-heading">
+          <div class="section-heading"><span id="evidence-heading">Evidence threshold</span><span class="counter" id="tier-counter">01 / 03</span></div>
+          <div class="level-title" id="level-title">Documented</div>
+          <p class="level-desc" id="level-description">Surviving, located monuments with published references.</p>
+          <label class="sr-only" for="evidence-slider">Evidence threshold</label>
+          <input id="evidence-slider" type="range" min="0" max="2" step="1" value="0" aria-describedby="slider-help" />
+          <div class="range-labels"><span>Documented</span><span>Interpreted</span><span>Proposed</span></div>
+          <p class="fineprint" id="slider-help">Higher settings add claims; they never turn interpretations into observations.</p>
+        </section>
+
+        <section class="control-card confidence-card" aria-labelledby="confidence-heading">
+          <div class="section-heading"><span id="confidence-heading">Minimum confidence</span></div>
+          <p class="filter-hint">Confidence is a separate judgment from evidence type.</p>
+          <label class="sr-only" for="confidence-filter">Minimum confidence</label>
+          <select id="confidence-filter"><option value="all">Include all confidence levels</option><option value="medium">Medium and high</option><option value="high">High only</option></select>
+        </section>
+        <section class="sites-section" aria-labelledby="sites-heading">
+          <div class="section-heading"><span id="sites-heading">Explore documented places</span><span id="site-count" class="subtle-count"></span></div>
+          <div id="site-list" class="site-list" aria-live="polite"></div>
+        </section>
+        <section class="layers-section" aria-labelledby="layers-heading">
+          <div class="section-heading"><span id="layers-heading">Geospatial layers</span></div>
+          <div id="layer-list" class="layer-list"></div>
+          <p class="fineprint">Only layers with verified publication metadata are loaded. No raw LiDAR is included.</p>
+        </section>
+        <div class="sidebar-note"><strong>Ground-truth rule</strong><p>The markers are approximate reference locations of known sites. This prototype does <em>not</em> contain raw archaeological LiDAR, mound footprints, or reconstructed buildings.</p></div>
+      </aside>
+
+      <section class="map-section" aria-label="Interactive map of Angkor">
+        <div id="map" class="map" role="application" aria-label="Map showing documented archaeological places around Angkor Wat in Cambodia"></div>
+        <div class="map-failure" id="map-failure" hidden>
+          <strong>Basemap unavailable</strong><p>Check your network connection. The source records and evidence explorer still work.</p>
+        </div>
+        <div class="map-floating map-heading"><span class="small-label">AREA OF INTEREST</span><strong>Angkor · Cambodia</strong><span>13.43° N / 103.87° E</span></div>
+        <div class="map-floating map-key" aria-label="Map legend"><span><i class="legend-dot"></i> Documented location</span><span><i class="legend-ring"></i> Selected site</span></div>
+        <button id="reset-map" class="map-reset" type="button" title="Show all sites">↗ <span>View all sites</span></button>
+      </section>
+
+      <aside class="detail-panel" aria-live="polite" aria-label="Selected site evidence">
+        <div class="eyebrow">02 / INSPECT THE EVIDENCE</div>
+        <div class="detail-head"><div class="detail-icon" aria-hidden="true">⌖</div><div><h2 id="site-title">Angkor Wat</h2><div class="site-period" id="site-period"></div></div></div>
+        <p class="site-description" id="site-description"></p>
+        <div class="detail-actions"><button id="share-view" type="button">Copy view link</button><button id="copy-dossier" type="button">Copy evidence dossier</button></div>
+        <div id="action-status" class="action-status" role="status" aria-live="polite"></div>
+        <div class="divider"></div>
+        <div class="section-heading"><span>Evidence records</span><span class="counter" id="claim-count"></span></div>
+        <div id="records" class="records"></div>
+        <div class="evidence-bottom"><span class="small-label">DATA PROVENANCE</span><p>Each claim links to a source. Proposed reconstruction ideas are design placeholders, not authenticated ancient structures.</p><a href="./docs/data-policy.md" target="_blank" rel="noopener">Read the data policy ↗</a></div>
+      </aside>
+    </main>
+    <footer><span>OPEN METHODS · EXPLICIT UNCERTAINTY · TRACEABLE SOURCES</span><span>Map data © OpenStreetMap contributors · MapLibre</span><a href="./LICENSE">MIT licensed code</a></footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
